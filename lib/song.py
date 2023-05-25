@@ -10,7 +10,7 @@ class Song:
         self.artist = artist
         self.genre = genre
         Song.update_collection(self)
-        
+
     @classmethod
     def add_song_to_count(cls):
         cls.count += 1
@@ -19,3 +19,8 @@ class Song:
     def add_to_genres(cls, genre):
         if cls.genres.count(genre) == 0:
             cls.genres.append(genre)
+
+    @classmethod
+    def add_to_artists(cls, artist):
+        if cls.artists.count(artist) == 0:
+            cls.artists.append(artist)
