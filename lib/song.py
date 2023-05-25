@@ -39,3 +39,10 @@ class Song:
         else:
             cls.artist_count[artist] += 1
 
+    @classmethod
+    def update_collection(cls, song):
+        cls.add_song_to_count()
+        cls.add_to_genres(song.genre)
+        cls.add_to_artists(song.artist)
+        cls.add_to_genre_count(song.genre)
+        cls.add_to_artist_count(song.artist)
